@@ -1,0 +1,13 @@
+"./main.obj"
+"./Displaysteuerung/Displayanzeige/settings.obj"
+"./Displaysteuerung/Displayanzeige/start.obj"
+"./Displaysteuerung/LCD/digit.obj"
+"./Displaysteuerung/LCD/lcd.obj"
+"./Displaysteuerung/controlfunctions.obj"
+"./Displaysteuerung/power.obj"
+"./Signalauswertung/dynamoauswertung.obj"
+"./Signalauswertung/fram.obj"
+"../lnk_msp430fr5739.cmd"
+-llibmpu_init_fr57xx.a
+-llibmath.a
+-llibc.a
