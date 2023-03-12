@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fahrradtacho: C:/Users/GRAUMKLI/Desktop/Studienarbeit 2/CCS Varianten/SoftwareLoesung/Displaysteuerung/controlfunctions.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fahrradtacho
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_491d67760a016074aa5048fb93026e67.html">CCS Varianten</a></li><li class="navelem"><a class="el" href="dir_19043390bafe282b6fcfd4b33e582a49.html">SoftwareLoesung</a></li><li class="navelem"><a class="el" href="dir_c3ab86df288bb42e26f265b0e245fe1e.html">Displaysteuerung</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle"><div class="title">controlfunctions.c-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;msp430.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;C:\Users\GRAUMKLI\Desktop\Studienarbeit 2\CSS Projekt\Displaysteuerung\power.h&quot;</code><br />
+<code>#include &quot;C:\Users\GRAUMKLI\Desktop\Studienarbeit 2\CSS Projekt\Displaysteuerung\LCD\lcd.h&quot;</code><br />
+<code>#include &quot;C:\Users\GRAUMKLI\Desktop\Studienarbeit 2\CSS Projekt\Displaysteuerung\LCD\digit.h&quot;</code><br />
+<code>#include &quot;C:\Users\GRAUMKLI\Desktop\Studienarbeit 2\CSS Projekt\Displaysteuerung\Displayanzeige\settings.h&quot;</code><br />
+<code>#include &quot;C:\Users\GRAUMKLI\Desktop\Studienarbeit 2\CSS Projekt\Displaysteuerung\Displayanzeige\start.h&quot;</code><br />
+<code>#include &quot;C:\Users\GRAUMKLI\Desktop\Studienarbeit 2\CSS Projekt\Signalauswertung\fram.h&quot;</code><br />
+<code>#include &quot;C:\Users\GRAUMKLI\Desktop\Studienarbeit 2\CSS Projekt\Signalauswertung\dynamoauswertung.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="controlfunctions_8h_source.html">controlfunctions.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für controlfunctions.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="controlfunctions_8c__incl.png" border="0" usemap="#a_c_1_2_users_2_g_r_a_u_m_k_l_i_2_desktop_2_studienarbeit_012_2_c_c_s_01_varianten_2_software_loesung_2_displaysteuerung_2controlfunctions_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a> ()</td></tr>
+<tr class="memdesc:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisierung aller Bestandteile.  <br /></td></tr>
+<tr class="separator:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac079cd712ceeaf40cc0733b0f3a5d860"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#ac079cd712ceeaf40cc0733b0f3a5d860">init_display</a> ()</td></tr>
+<tr class="memdesc:ac079cd712ceeaf40cc0733b0f3a5d860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Beschreiben des Displays mit dem aktuellen Inhalt.  <br /></td></tr>
+<tr class="separator:ac079cd712ceeaf40cc0733b0f3a5d860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb1d60094afb2ff57473a3df6a011fdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#abb1d60094afb2ff57473a3df6a011fdc">draw_display</a> ()</td></tr>
+<tr class="memdesc:abb1d60094afb2ff57473a3df6a011fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktualisieren der Inhalte auf den Menueseiten.  <br /></td></tr>
+<tr class="separator:abb1d60094afb2ff57473a3df6a011fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2ba800834495bb295891490cb1c760"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a5c2ba800834495bb295891490cb1c760">port_init</a> ()</td></tr>
+<tr class="memdesc:a5c2ba800834495bb295891490cb1c760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisierung der benoetigten Pins.  <br /></td></tr>
+<tr class="separator:a5c2ba800834495bb295891490cb1c760"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cc0a879e88eea28e4e8b57318ef8e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#ae9cc0a879e88eea28e4e8b57318ef8e5">clock_init</a> ()</td></tr>
+<tr class="memdesc:ae9cc0a879e88eea28e4e8b57318ef8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisierung der Clocks.  <br /></td></tr>
+<tr class="separator:ae9cc0a879e88eea28e4e8b57318ef8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a896a4c37c6ecf8868ef0dc758e5a598c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a896a4c37c6ecf8868ef0dc758e5a598c">timer_init</a> ()</td></tr>
+<tr class="memdesc:a896a4c37c6ecf8868ef0dc758e5a598c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisierung von Timer A0.  <br /></td></tr>
+<tr class="separator:a896a4c37c6ecf8868ef0dc758e5a598c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88325fbad0aa5e965f1f6471caac0bbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a88325fbad0aa5e965f1f6471caac0bbb">timer_disable</a> ()</td></tr>
+<tr class="memdesc:a88325fbad0aa5e965f1f6471caac0bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abschalten von Timer A0.  <br /></td></tr>
+<tr class="separator:a88325fbad0aa5e965f1f6471caac0bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad41ff8b7a87ff911979d422baa131f6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#ad41ff8b7a87ff911979d422baa131f6d">timer_enable</a> ()</td></tr>
+<tr class="memdesc:ad41ff8b7a87ff911979d422baa131f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starten von Timer A0.  <br /></td></tr>
+<tr class="separator:ad41ff8b7a87ff911979d422baa131f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41de7204613a5d261a3cdcd3de9e1791"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a41de7204613a5d261a3cdcd3de9e1791">getDecInNumber</a> (uint32_t *num, uint8_t pos)</td></tr>
+<tr class="memdesc:a41de7204613a5d261a3cdcd3de9e1791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bestimmung der aktuellen Ziffer inerhalb einer Zahl.  <br /></td></tr>
+<tr class="separator:a41de7204613a5d261a3cdcd3de9e1791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacaabbb005b1c5f8deda4ba736712a82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#aacaabbb005b1c5f8deda4ba736712a82">changeInteger</a> (uint8_t *Integer, uint8_t Anzahl)</td></tr>
+<tr class="memdesc:aacaabbb005b1c5f8deda4ba736712a82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erhoehung einer Ziffer von 0 bis 9.  <br /></td></tr>
+<tr class="separator:aacaabbb005b1c5f8deda4ba736712a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23382e330f5892505f9c4ce4652212c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a23382e330f5892505f9c4ce4652212c9">changeDecInNumber</a> (uint32_t *num, uint8_t pos, uint8_t new_val)</td></tr>
+<tr class="memdesc:a23382e330f5892505f9c4ce4652212c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aenderung einer Ziffer inerhalb einer Zahl.  <br /></td></tr>
+<tr class="separator:a23382e330f5892505f9c4ce4652212c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098a48b9828b884e1812657bb71d4e8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a098a48b9828b884e1812657bb71d4e8e">changeIntegerInSettings</a> (uint32_t *num, uint8_t pos)</td></tr>
+<tr class="memdesc:a098a48b9828b884e1812657bb71d4e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zusammenfassende Funktion um eine ausgewaehlte Ziffer innerhalb einer Zahl zu erhoehen.  <br /></td></tr>
+<tr class="separator:a098a48b9828b884e1812657bb71d4e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96873cc5520aa94f1b76d4cc36f9d020"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a96873cc5520aa94f1b76d4cc36f9d020">button1</a> (uint8_t zustand)</td></tr>
+<tr class="memdesc:a96873cc5520aa94f1b76d4cc36f9d020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verwaltung aller noetigen Ereignisse, welche durch das Betaetigen des ersten Tasters ausgeloest werden sollen.  <br /></td></tr>
+<tr class="separator:a96873cc5520aa94f1b76d4cc36f9d020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1afdeb043388ac4e082e2470d116a11a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a1afdeb043388ac4e082e2470d116a11a">button2</a> (uint8_t zustand)</td></tr>
+<tr class="memdesc:a1afdeb043388ac4e082e2470d116a11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verwaltung aller noetigen Ereignisse, welche durch das Betaetigen des zweiten Tasters ausgeloest werden sollen.  <br /></td></tr>
+<tr class="separator:a1afdeb043388ac4e082e2470d116a11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd3afbb2a6c53a2c40f6c1ab3f5ce27"><td class="memItemLeft" align="right" valign="top">__interrupt void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#addd3afbb2a6c53a2c40f6c1ab3f5ce27">port3_ISR</a> (void)</td></tr>
+<tr class="memdesc:addd3afbb2a6c53a2c40f6c1ab3f5ce27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verwaltung der Port-Interrupts.  <br /></td></tr>
+<tr class="separator:addd3afbb2a6c53a2c40f6c1ab3f5ce27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c112fb2af702f427d6ddff6f1f2893"><td class="memItemLeft" align="right" valign="top">interrupt void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a11c112fb2af702f427d6ddff6f1f2893">TIMER0_A0_ISR</a> ()</td></tr>
+<tr class="memdesc:a11c112fb2af702f427d6ddff6f1f2893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer A0 Interrupt zum Entprellen der Taster.  <br /></td></tr>
+<tr class="separator:a11c112fb2af702f427d6ddff6f1f2893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variablen</h2></td></tr>
+<tr class="memitem:a804cbfb6a57fb0e5b762a70125916070"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a804cbfb6a57fb0e5b762a70125916070">Click1</a> = 0</td></tr>
+<tr class="separator:a804cbfb6a57fb0e5b762a70125916070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc308076d22483a188c743ac181ec8d"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#aefc308076d22483a188c743ac181ec8d">Click2</a> = 0</td></tr>
+<tr class="separator:aefc308076d22483a188c743ac181ec8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f780c7d3e83ee1f9d2147b9f33a091"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#ad4f780c7d3e83ee1f9d2147b9f33a091">Screen</a> = 0</td></tr>
+<tr class="separator:ad4f780c7d3e83ee1f9d2147b9f33a091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2aa920730c208d550928bc5e6cb4735"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#ae2aa920730c208d550928bc5e6cb4735">x_value</a> = 0</td></tr>
+<tr class="separator:ae2aa920730c208d550928bc5e6cb4735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5f1a6b39a24366b92990531f31ae47"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="controlfunctions_8c.html#a0c5f1a6b39a24366b92990531f31ae47">y_value</a> = 0</td></tr>
+<tr class="separator:a0c5f1a6b39a24366b92990531f31ae47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentation der Funktionen</h2>
+<a id="a96873cc5520aa94f1b76d4cc36f9d020" name="a96873cc5520aa94f1b76d4cc36f9d020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96873cc5520aa94f1b76d4cc36f9d020">&#9670;&#160;</a></span>button1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void button1 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>zustand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verwaltung aller noetigen Ereignisse, welche durch das Betaetigen des ersten Tasters ausgeloest werden sollen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zustand</td><td>Ausfuehrung der Funktion sobald dieser Zustand aktiv ist </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1afdeb043388ac4e082e2470d116a11a" name="a1afdeb043388ac4e082e2470d116a11a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1afdeb043388ac4e082e2470d116a11a">&#9670;&#160;</a></span>button2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void button2 </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>zustand</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verwaltung aller noetigen Ereignisse, welche durch das Betaetigen des zweiten Tasters ausgeloest werden sollen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zustand</td><td>Ausfuehrung der Funktion sobald dieser Zustand aktiv ist </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a23382e330f5892505f9c4ce4652212c9" name="a23382e330f5892505f9c4ce4652212c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23382e330f5892505f9c4ce4652212c9">&#9670;&#160;</a></span>changeDecInNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void changeDecInNumber </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>new_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aenderung einer Ziffer inerhalb einer Zahl. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*num</td><td>Speicherort der Zahl </td></tr>
+    <tr><td class="paramname">pos</td><td>Position innerhalb der Zahl </td></tr>
+    <tr><td class="paramname">new_val</td><td>Neue Ziffer, welche an der Stelle eingesetzt werden soll </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aacaabbb005b1c5f8deda4ba736712a82" name="aacaabbb005b1c5f8deda4ba736712a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacaabbb005b1c5f8deda4ba736712a82">&#9670;&#160;</a></span>changeInteger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void changeInteger </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>Integer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>Anzahl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Erhoehung einer Ziffer von 0 bis 9. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*Integer</td><td>Speicherort der zu aendernden Ziffer </td></tr>
+    <tr><td class="paramname">Anzahl</td><td>Anzahl an Erhoehungen der Ziffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a098a48b9828b884e1812657bb71d4e8e" name="a098a48b9828b884e1812657bb71d4e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a098a48b9828b884e1812657bb71d4e8e">&#9670;&#160;</a></span>changeIntegerInSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void changeIntegerInSettings </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zusammenfassende Funktion um eine ausgewaehlte Ziffer innerhalb einer Zahl zu erhoehen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*num</td><td>Speicherort der Zahl </td></tr>
+    <tr><td class="paramname">pos</td><td>Position innerhalb der Zahl </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae9cc0a879e88eea28e4e8b57318ef8e5" name="ae9cc0a879e88eea28e4e8b57318ef8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9cc0a879e88eea28e4e8b57318ef8e5">&#9670;&#160;</a></span>clock_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clock_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisierung der Clocks. </p>
+
+</div>
+</div>
+<a id="abb1d60094afb2ff57473a3df6a011fdc" name="abb1d60094afb2ff57473a3df6a011fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb1d60094afb2ff57473a3df6a011fdc">&#9670;&#160;</a></span>draw_display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_display </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aktualisieren der Inhalte auf den Menueseiten. </p>
+
+</div>
+</div>
+<a id="a41de7204613a5d261a3cdcd3de9e1791" name="a41de7204613a5d261a3cdcd3de9e1791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41de7204613a5d261a3cdcd3de9e1791">&#9670;&#160;</a></span>getDecInNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t getDecInNumber </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>num</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bestimmung der aktuellen Ziffer inerhalb einer Zahl. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*num</td><td>Speicherort der Zahl </td></tr>
+    <tr><td class="paramname">pos</td><td>Position innerhalb der Zahl </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Ziffer an gewuenschter Stelle </dd></dl>
+
+</div>
+</div>
+<a id="a02fd73d861ef2e4aabb38c0c9ff82947" name="a02fd73d861ef2e4aabb38c0c9ff82947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02fd73d861ef2e4aabb38c0c9ff82947">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisierung aller Bestandteile. </p>
+
+</div>
+</div>
+<a id="ac079cd712ceeaf40cc0733b0f3a5d860" name="ac079cd712ceeaf40cc0733b0f3a5d860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac079cd712ceeaf40cc0733b0f3a5d860">&#9670;&#160;</a></span>init_display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_display </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Beschreiben des Displays mit dem aktuellen Inhalt. </p>
+
+</div>
+</div>
+<a id="addd3afbb2a6c53a2c40f6c1ab3f5ce27" name="addd3afbb2a6c53a2c40f6c1ab3f5ce27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd3afbb2a6c53a2c40f6c1ab3f5ce27">&#9670;&#160;</a></span>port3_ISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__interrupt void port3_ISR </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verwaltung der Port-Interrupts. </p>
+
+</div>
+</div>
+<a id="a5c2ba800834495bb295891490cb1c760" name="a5c2ba800834495bb295891490cb1c760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c2ba800834495bb295891490cb1c760">&#9670;&#160;</a></span>port_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisierung der benoetigten Pins. </p>
+
+</div>
+</div>
+<a id="a11c112fb2af702f427d6ddff6f1f2893" name="a11c112fb2af702f427d6ddff6f1f2893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c112fb2af702f427d6ddff6f1f2893">&#9670;&#160;</a></span>TIMER0_A0_ISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">interrupt void TIMER0_A0_ISR </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timer A0 Interrupt zum Entprellen der Taster. </p>
+
+</div>
+</div>
+<a id="a88325fbad0aa5e965f1f6471caac0bbb" name="a88325fbad0aa5e965f1f6471caac0bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88325fbad0aa5e965f1f6471caac0bbb">&#9670;&#160;</a></span>timer_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer_disable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Abschalten von Timer A0. </p>
+
+</div>
+</div>
+<a id="ad41ff8b7a87ff911979d422baa131f6d" name="ad41ff8b7a87ff911979d422baa131f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad41ff8b7a87ff911979d422baa131f6d">&#9670;&#160;</a></span>timer_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer_enable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starten von Timer A0. </p>
+
+</div>
+</div>
+<a id="a896a4c37c6ecf8868ef0dc758e5a598c" name="a896a4c37c6ecf8868ef0dc758e5a598c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a896a4c37c6ecf8868ef0dc758e5a598c">&#9670;&#160;</a></span>timer_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void timer_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisierung von Timer A0. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variablen-Dokumentation</h2>
+<a id="a804cbfb6a57fb0e5b762a70125916070" name="a804cbfb6a57fb0e5b762a70125916070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a804cbfb6a57fb0e5b762a70125916070">&#9670;&#160;</a></span>Click1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t Click1 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefc308076d22483a188c743ac181ec8d" name="aefc308076d22483a188c743ac181ec8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc308076d22483a188c743ac181ec8d">&#9670;&#160;</a></span>Click2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t Click2 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4f780c7d3e83ee1f9d2147b9f33a091" name="ad4f780c7d3e83ee1f9d2147b9f33a091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f780c7d3e83ee1f9d2147b9f33a091">&#9670;&#160;</a></span>Screen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t Screen = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2aa920730c208d550928bc5e6cb4735" name="ae2aa920730c208d550928bc5e6cb4735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2aa920730c208d550928bc5e6cb4735">&#9670;&#160;</a></span>x_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t x_value = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c5f1a6b39a24366b92990531f31ae47" name="a0c5f1a6b39a24366b92990531f31ae47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5f1a6b39a24366b92990531f31ae47">&#9670;&#160;</a></span>y_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t y_value = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Fahrradtacho: C:/Users/GRAUMKLI/Desktop/Studienarbeit 2/CCS Varianten/SoftwareLoesung/Displaysteuerung/controlfunctions.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Fahrradtacho
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_491d67760a016074aa5048fb93026e67.html">CCS Varianten</a></li><li class="navelem"><a class="el" href="dir_19043390bafe282b6fcfd4b33e582a49.html">SoftwareLoesung</a></li><li class="navelem"><a class="el" href="dir_c3ab86df288bb42e26f265b0e245fe1e.html">Displaysteuerung</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">controlfunctions.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="controlfunctions_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * controlfunctions.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  Created on: 21.01.2023</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *      Author: graumkli</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef DISPLAYSTEUERUNG_CONTROLFUNCTIONS_H_</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define DISPLAYSTEUERUNG_CONTROLFUNCTIONS_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">extern</span> <span class="keyword">volatile</span> uint8_t <a class="code hl_variable" href="controlfunctions_8h.html#ad4f780c7d3e83ee1f9d2147b9f33a091">Screen</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">extern</span> <span class="keyword">volatile</span> uint8_t <a class="code hl_variable" href="controlfunctions_8h.html#a804cbfb6a57fb0e5b762a70125916070">Click1</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">extern</span> <span class="keyword">volatile</span> uint8_t <a class="code hl_variable" href="controlfunctions_8h.html#aefc308076d22483a188c743ac181ec8d">Click2</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">extern</span> <span class="keyword">volatile</span> uint8_t <a class="code hl_variable" href="controlfunctions_8h.html#ae2aa920730c208d550928bc5e6cb4735">x_value</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">extern</span> <span class="keyword">volatile</span> uint8_t <a class="code hl_variable" href="controlfunctions_8h.html#a0c5f1a6b39a24366b92990531f31ae47">y_value</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#ac079cd712ceeaf40cc0733b0f3a5d860">init_display</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#abb1d60094afb2ff57473a3df6a011fdc">draw_display</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#a5c2ba800834495bb295891490cb1c760">port_init</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#ae9cc0a879e88eea28e4e8b57318ef8e5">clock_init</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#a896a4c37c6ecf8868ef0dc758e5a598c">timer_init</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#a88325fbad0aa5e965f1f6471caac0bbb">timer_disable</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#ad41ff8b7a87ff911979d422baa131f6d">timer_enable</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>uint8_t <a class="code hl_function" href="controlfunctions_8h.html#a41de7204613a5d261a3cdcd3de9e1791">getDecInNumber</a>(uint32_t *num, uint8_t pos);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#aacaabbb005b1c5f8deda4ba736712a82">changeInteger</a>(uint8_t *Integer, uint8_t Anzahl);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#a23382e330f5892505f9c4ce4652212c9">changeDecInNumber</a>(uint32_t *num, uint8_t pos, uint8_t new_val);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#a098a48b9828b884e1812657bb71d4e8e">changeIntegerInSettings</a>(uint32_t *num, uint8_t pos);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#a96873cc5520aa94f1b76d4cc36f9d020">button1</a>(uint8_t zustand);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#a1afdeb043388ac4e082e2470d116a11a">button2</a>(uint8_t zustand);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>__interrupt <span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#addd3afbb2a6c53a2c40f6c1ab3f5ce27">port3_ISR</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="controlfunctions_8h.html#a5c369c10bee4ee2be4a7b3804114b196">   34</a></span>__interrupt <span class="keywordtype">void</span> <a class="code hl_function" href="controlfunctions_8h.html#a5c369c10bee4ee2be4a7b3804114b196">TIMER0_A0</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">/* DISPLAYSTEUERUNG_CONTROLFUNCTIONS_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a02fd73d861ef2e4aabb38c0c9ff82947"><div class="ttname"><a href="controlfunctions_8h.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialisierung aller Bestandteile.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:30</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a098a48b9828b884e1812657bb71d4e8e"><div class="ttname"><a href="controlfunctions_8h.html#a098a48b9828b884e1812657bb71d4e8e">changeIntegerInSettings</a></div><div class="ttdeci">void changeIntegerInSettings(uint32_t *num, uint8_t pos)</div><div class="ttdoc">Zusammenfassende Funktion um eine ausgewaehlte Ziffer innerhalb einer Zahl zu erhoehen.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:212</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a0c5f1a6b39a24366b92990531f31ae47"><div class="ttname"><a href="controlfunctions_8h.html#a0c5f1a6b39a24366b92990531f31ae47">y_value</a></div><div class="ttdeci">volatile uint8_t y_value</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:25</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a1afdeb043388ac4e082e2470d116a11a"><div class="ttname"><a href="controlfunctions_8h.html#a1afdeb043388ac4e082e2470d116a11a">button2</a></div><div class="ttdeci">void button2(uint8_t zustand)</div><div class="ttdoc">Verwaltung aller noetigen Ereignisse, welche durch das Betaetigen des zweiten Tasters ausgeloest werd...</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:287</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a23382e330f5892505f9c4ce4652212c9"><div class="ttname"><a href="controlfunctions_8h.html#a23382e330f5892505f9c4ce4652212c9">changeDecInNumber</a></div><div class="ttdeci">void changeDecInNumber(uint32_t *num, uint8_t pos, uint8_t new_val)</div><div class="ttdoc">Aenderung einer Ziffer inerhalb einer Zahl.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:187</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a41de7204613a5d261a3cdcd3de9e1791"><div class="ttname"><a href="controlfunctions_8h.html#a41de7204613a5d261a3cdcd3de9e1791">getDecInNumber</a></div><div class="ttdeci">uint8_t getDecInNumber(uint32_t *num, uint8_t pos)</div><div class="ttdoc">Bestimmung der aktuellen Ziffer inerhalb einer Zahl.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:154</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a5c2ba800834495bb295891490cb1c760"><div class="ttname"><a href="controlfunctions_8h.html#a5c2ba800834495bb295891490cb1c760">port_init</a></div><div class="ttdeci">void port_init()</div><div class="ttdoc">Initialisierung der benoetigten Pins.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:102</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a5c369c10bee4ee2be4a7b3804114b196"><div class="ttname"><a href="controlfunctions_8h.html#a5c369c10bee4ee2be4a7b3804114b196">TIMER0_A0</a></div><div class="ttdeci">__interrupt void TIMER0_A0(void)</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a804cbfb6a57fb0e5b762a70125916070"><div class="ttname"><a href="controlfunctions_8h.html#a804cbfb6a57fb0e5b762a70125916070">Click1</a></div><div class="ttdeci">volatile uint8_t Click1</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:21</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a88325fbad0aa5e965f1f6471caac0bbb"><div class="ttname"><a href="controlfunctions_8h.html#a88325fbad0aa5e965f1f6471caac0bbb">timer_disable</a></div><div class="ttdeci">void timer_disable()</div><div class="ttdoc">Abschalten von Timer A0.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:135</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a896a4c37c6ecf8868ef0dc758e5a598c"><div class="ttname"><a href="controlfunctions_8h.html#a896a4c37c6ecf8868ef0dc758e5a598c">timer_init</a></div><div class="ttdeci">void timer_init()</div><div class="ttdoc">Initialisierung von Timer A0.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:126</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_a96873cc5520aa94f1b76d4cc36f9d020"><div class="ttname"><a href="controlfunctions_8h.html#a96873cc5520aa94f1b76d4cc36f9d020">button1</a></div><div class="ttdeci">void button1(uint8_t zustand)</div><div class="ttdoc">Verwaltung aller noetigen Ereignisse, welche durch das Betaetigen des ersten Tasters ausgeloest werde...</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:228</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_aacaabbb005b1c5f8deda4ba736712a82"><div class="ttname"><a href="controlfunctions_8h.html#aacaabbb005b1c5f8deda4ba736712a82">changeInteger</a></div><div class="ttdeci">void changeInteger(uint8_t *Integer, uint8_t Anzahl)</div><div class="ttdoc">Erhoehung einer Ziffer von 0 bis 9.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:170</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_abb1d60094afb2ff57473a3df6a011fdc"><div class="ttname"><a href="controlfunctions_8h.html#abb1d60094afb2ff57473a3df6a011fdc">draw_display</a></div><div class="ttdeci">void draw_display()</div><div class="ttdoc">Aktualisieren der Inhalte auf den Menueseiten.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:86</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_ac079cd712ceeaf40cc0733b0f3a5d860"><div class="ttname"><a href="controlfunctions_8h.html#ac079cd712ceeaf40cc0733b0f3a5d860">init_display</a></div><div class="ttdeci">void init_display()</div><div class="ttdoc">Beschreiben des Displays mit dem aktuellen Inhalt.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:43</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_ad41ff8b7a87ff911979d422baa131f6d"><div class="ttname"><a href="controlfunctions_8h.html#ad41ff8b7a87ff911979d422baa131f6d">timer_enable</a></div><div class="ttdeci">void timer_enable()</div><div class="ttdoc">Starten von Timer A0.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:143</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_ad4f780c7d3e83ee1f9d2147b9f33a091"><div class="ttname"><a href="controlfunctions_8h.html#ad4f780c7d3e83ee1f9d2147b9f33a091">Screen</a></div><div class="ttdeci">volatile uint8_t Screen</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:23</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_addd3afbb2a6c53a2c40f6c1ab3f5ce27"><div class="ttname"><a href="controlfunctions_8h.html#addd3afbb2a6c53a2c40f6c1ab3f5ce27">port3_ISR</a></div><div class="ttdeci">__interrupt void port3_ISR(void)</div><div class="ttdoc">Verwaltung der Port-Interrupts.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:364</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_ae2aa920730c208d550928bc5e6cb4735"><div class="ttname"><a href="controlfunctions_8h.html#ae2aa920730c208d550928bc5e6cb4735">x_value</a></div><div class="ttdeci">volatile uint8_t x_value</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:24</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_ae9cc0a879e88eea28e4e8b57318ef8e5"><div class="ttname"><a href="controlfunctions_8h.html#ae9cc0a879e88eea28e4e8b57318ef8e5">clock_init</a></div><div class="ttdeci">void clock_init()</div><div class="ttdoc">Initialisierung der Clocks.</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:114</div></div>
+<div class="ttc" id="acontrolfunctions_8h_html_aefc308076d22483a188c743ac181ec8d"><div class="ttname"><a href="controlfunctions_8h.html#aefc308076d22483a188c743ac181ec8d">Click2</a></div><div class="ttdeci">volatile uint8_t Click2</div><div class="ttdef"><b>Definition:</b> controlfunctions.c:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Erzeugt von&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
