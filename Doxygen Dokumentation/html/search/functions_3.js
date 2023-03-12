@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['calc_5fdist_0',['calc_dist',['../dynamoauswertung_8c.html#a7b8ba2bb9dc030b3f65d6fb2db74f518',1,'calc_dist():&#160;dynamoauswertung.c'],['../dynamoauswertung_8h.html#a7b8ba2bb9dc030b3f65d6fb2db74f518',1,'calc_dist():&#160;dynamoauswertung.c']]],
+  ['calc_5fspeed_1',['calc_speed',['../dynamoauswertung_8c.html#a2543a750dd7cc39d364800ec1a0d5635',1,'calc_speed():&#160;dynamoauswertung.c'],['../dynamoauswertung_8h.html#a2543a750dd7cc39d364800ec1a0d5635',1,'calc_speed():&#160;dynamoauswertung.c']]],
+  ['changedecinnumber_2',['changeDecInNumber',['../controlfunctions_8c.html#a23382e330f5892505f9c4ce4652212c9',1,'changeDecInNumber(uint32_t *num, uint8_t pos, uint8_t new_val):&#160;controlfunctions.c'],['../controlfunctions_8h.html#a23382e330f5892505f9c4ce4652212c9',1,'changeDecInNumber(uint32_t *num, uint8_t pos, uint8_t new_val):&#160;controlfunctions.c']]],
+  ['changeinteger_3',['changeInteger',['../controlfunctions_8c.html#aacaabbb005b1c5f8deda4ba736712a82',1,'changeInteger(uint8_t *Integer, uint8_t Anzahl):&#160;controlfunctions.c'],['../controlfunctions_8h.html#aacaabbb005b1c5f8deda4ba736712a82',1,'changeInteger(uint8_t *Integer, uint8_t Anzahl):&#160;controlfunctions.c']]],
+  ['changeintegerinsettings_4',['changeIntegerInSettings',['../controlfunctions_8c.html#a098a48b9828b884e1812657bb71d4e8e',1,'changeIntegerInSettings(uint32_t *num, uint8_t pos):&#160;controlfunctions.c'],['../controlfunctions_8h.html#a098a48b9828b884e1812657bb71d4e8e',1,'changeIntegerInSettings(uint32_t *num, uint8_t pos):&#160;controlfunctions.c']]],
+  ['clock_5finit_5',['clock_init',['../controlfunctions_8c.html#ae9cc0a879e88eea28e4e8b57318ef8e5',1,'clock_init():&#160;controlfunctions.c'],['../controlfunctions_8h.html#ae9cc0a879e88eea28e4e8b57318ef8e5',1,'clock_init():&#160;controlfunctions.c']]]
+];
